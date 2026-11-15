@@ -1131,14 +1131,8 @@
         const scrollHint = document.querySelector(".scroll-hint");
 
         function renderGuestName() {
-            document.querySelectorAll("#guestName").forEach((element) => {
+            document.querySelectorAll("#guestName, [data-guest-name]").forEach((element) => {
                 element.textContent = window.currentGuestName;
-            });
-        }
-
-        function renderGuestRole(role) {
-            document.querySelectorAll("[data-guest-name]").forEach((element) => {
-                element.textContent = role;
             });
         }
 
@@ -1168,7 +1162,6 @@
                 const role =   guest?.role?.trim() || "";
                 window.currentGuestName = guest?.guestName?.trim() || "";
                 renderMyRole(role);
-                renderGuestRole(role);
             } catch (error) {
                 window.currentGuestName = "";
                 guest = "";
