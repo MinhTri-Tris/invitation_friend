@@ -1,0 +1,15 @@
+{
+    "default": {
+        "guestName": ""
+    },
+
+    "chi-han": {
+        "guestName": "Chị Ngọc Hân",
+        "role":"em"
+    },
+
+    "huu-tai": {
+        "guestName": "Hữu Tài",
+        "role":"mình"
+    }
+}
