@@ -1144,10 +1144,10 @@
 
         function renderMyRole(role) {
             document.querySelectorAll("[my_role]").forEach((element) => {
-                if(role === "Mẹ" || role === "Ba")
-                    element.textContent = "con";
-                else
+                if(role === "chị")
                     element.textContent = "em";
+                else
+                    element.textContent = "mình";
             });
         }
 
@@ -1158,7 +1158,7 @@
             const guestId = (params.get("to") || "default").trim();
 
             try {
-                const response = await fetch("./family.json", { cache: "no-store" });
+                const response = await fetch("./guests.json", { cache: "no-store" });
                 if (!response.ok) {
                     throw new Error(`Cannot load guests.json: HTTP ${response.status}`);
                 }
